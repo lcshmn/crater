@@ -13,7 +13,7 @@ services:
     restart: unless-stopped
     working_dir: /var/www/
     volumes:
-      - ./:/var/www
+     # - ./:/var/www
       - ./docker-compose/php/uploads.ini:/usr/local/etc/php/conf.d/uploads.ini:ro
     networks:
       - crater
@@ -37,7 +37,7 @@ services:
     container_name: crater-nginx
     restart: unless-stopped
     volumes:
-      - ./:/var/www
+      # - ./:/var/www
       - ./docker-compose/nginx:/etc/nginx/conf.d/
     networks:
       - crater
@@ -49,7 +49,7 @@ services:
       dockerfile: ./docker-compose/cron.dockerfile
     container_name: crater-cron
     volumes:
-      - ./:/var/www
+      # - ./:/var/www
     networks:
       - crater
 

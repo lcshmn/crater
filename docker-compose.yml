@@ -48,8 +48,6 @@ services:
       context: ./
       dockerfile: ./docker-compose/cron.dockerfile
     container_name: crater-cron
-    volumes:
-      # - ./:/var/www
     networks:
       - crater
 
